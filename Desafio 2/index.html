@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>Desafio Capgemini</title>
+		<link rel="icon" href="favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+
+	</head>
+	<body>
+
+		<header>
+			<div class="container">
+				<h2 class="titulo">Desafio Capgemini</h2>
+			</div>
+		</header>
+		<main>
+			<section class="container">
+				<h2>Campanhas</h2>
+				<label for="filtrar-tabela">Filtre pelo nome do cliente:</label>
+				<input type="text" name="filtro" id="filtrar-tabela-nome" placeholder="Digite o nome do cliente">
+				<label for="filtrar-tabela">Filtre pela data:</label>
+				<input type="text" name="filtro" id="filtrar-tabela-data" placeholder="Digite a data">
+				<table>
+					<thead>
+						<tr>
+							<th>Nome do Anúncio</th>
+							<th>Nome do Cliente</th>
+							<th>Data Início</th>
+							<th>Data Fim</th>
+							<th>Inves-timento Diário</th>
+							<th>Valor Total Investido</th>
+							<th>Qtde Máxima Visuali-zações</th>
+							<th>Qtde Máxima Cliques</th>
+							<th>Qtde Máxima Comparti-lhamentos</th>
+						</tr>
+					</thead>
+					<tbody id="tabela-anuncios">
+						<tr class="anuncio">
+							<td class="info-nome-anuncio">Desafio</td>
+							<td class="info-nome-cliente">Capgemini</td>
+							<td class="info-data-inicio">01/01/2021</td>
+							<td class="info-data-fim">05/01/2021</td>
+							<td class="info-investimento-diario">100</td>
+							<td class="info-valor-investido">500</td>
+							<td class="info-qtde-max-visualizacoes">10</td>
+							<td class="info-qtde-max-cliques">20</td>
+							<td class="info-qtde-max-compartilhamentos">30</td>
+						</tr>
+						<tr class="anuncio">
+							<td class="info-nome-anuncio">Teste</td>
+							<td class="info-nome-cliente">Alessandra</td>
+							<td class="info-data-inicio">05/05/2021</td>
+							<td class="info-data-fim">06/06/2021</td>
+							<td class="info-investimento-diario">200</td>
+							<td class="info-valor-investido">1000</td>
+							<td class="info-qtde-max-visualizacoes">20</td>
+							<td class="info-qtde-max-cliques">40</td>
+							<td class="info-qtde-max-compartilhamentos">60</td>
+						</tr>
+					</tbody>
+				</table>
+
+			</section>
+		</main>
+
+		<section class="container">
+		    <h2 id="titulo-form">Adicionar novo anúncio</h2>
+			<ul id="mensagens-erro"></ul>
+		    <form id="form-adiciona">
+		        <div class="">
+		            <label for="nome">Nome do anúncio:</label>
+		            <input id="nome" name="nome" type="text" placeholder="Digite o nome do anúncio" class="campo">
+		        </div>
+		        <div class="grupo">
+		            <label for="cliente">Cliente:</label>
+		            <input id="cliente" name="cliente" type="text" placeholder="Digite o nome do cliente" class="campo campo-medio">
+		        </div>
+		        <div class="grupo">
+		            <label for="inicio">Data Inicio:</label>
+		            <input id="inicio" name="dataInicio" type="text" placeholder="Digite a data de início do anúncio" class="campo campo-medio">
+		        </div>
+		        <div class="grupo">
+		            <label for="fim">Data Fim:</label>
+		            <input id="fim" name="dataFim" type="text" placeholder="Digite a data de fim do anúncio" class="campo campo-medio">
+		        </div>
+		        <div class="grupo">
+		            <label for="investimento">Investimento Diário:</label>
+		            <input id="investimento" name="investimento" type="text" placeholder="Digite o valor do investimento diário" class="campo campo-medio">
+		        </div>
+
+		        <button id="adicionar-anuncio" class="botao bto-principal">Adicionar</button>
+		    </form>
+		</section>
+
+		<script src="js/calcula-investimento.js" ></script>
+		<script src="js/form.js" ></script>
+		<script src="js/filtra-nome.js" ></script>
+		<script src="js/filtra-data.js" ></script>
+		<script src="js/remover-anuncio.js" ></script>
+		<script src="node_modules/moment/moment.js" ></script>
+	</body>
+</html>
